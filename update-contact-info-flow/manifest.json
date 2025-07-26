@@ -1,0 +1,119 @@
+{
+  "schema": "1.0",
+  "details": {
+    "displayName": "update-contact-info-flow",
+    "description": "This flow allows users to update their contact information via a SharePoint list form. If not updated, the flow sends a reminder via Email.",
+    "createdTime": "2025-07-26T18:42:55.1242238Z",
+    "packageTelemetryId": "REDACTED_ID",
+    "creator": "REDACTED_CREATOR",
+    "sourceEnvironment": "REDACTED_ENVIRONMENT"
+  },
+  "resources": {
+    "7483ad3f-2128-4973-ad9f-0e1bfd7d1da3": {
+      "type": "Microsoft.Flow/flows",
+      "suggestedCreationType": "New",
+      "creationType": "Existing, New, Update",
+      "details": {
+        "displayName": "Update Contact Info - Update Information"
+      },
+      "configurableBy": "User",
+      "hierarchy": "Root",
+      "dependsOn": [
+        "deeb0d40-50c7-45b3-b897-8e60e53947cd",
+        "e62a1b5f-4c91-47b2-8546-e38f093c380f",
+        "f6c6e426-7140-4ee0-bd5f-0c6ba0be7297",
+        "9835698d-d7f6-4038-bda4-285de42b59bc",
+        "c0f4f5e5-395e-4379-8f34-b26ad5e6efe2",
+        "896bd160-1b78-4312-b0e2-8a3bdb95efe7",
+        "5f2458a9-9a32-41a9-873e-44bb8950caa2"
+      ]
+    },
+    "deeb0d40-50c7-45b3-b897-8e60e53947cd": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_office365",
+      "name": "shared_office365",
+      "type": "Microsoft.PowerApps/apis",
+      "suggestedCreationType": "Existing",
+      "details": {
+        "displayName": "Office 365 Outlook",
+        "iconUri": "https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/office365u_g_sqlPartialBuild/1.0.1759.4273/office365/icon.png"
+      },
+      "configurableBy": "System",
+      "hierarchy": "Child",
+      "dependsOn": []
+    },
+    "e62a1b5f-4c91-47b2-8546-e38f093c380f": {
+      "type": "Microsoft.PowerApps/apis/connections",
+      "suggestedCreationType": "Existing",
+      "creationType": "Existing",
+      "details": {
+        "displayName": "REDACTED_EMAIL",
+        "iconUri": "https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/office365u_g_sqlPartialBuild/1.0.1759.4273/office365/icon.png"
+      },
+      "configurableBy": "User",
+      "hierarchy": "Child",
+      "dependsOn": ["deeb0d40-50c7-45b3-b897-8e60e53947cd"]
+    },
+    "f6c6e426-7140-4ee0-bd5f-0c6ba0be7297": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_azuread",
+      "name": "shared_azuread",
+      "type": "Microsoft.PowerApps/apis",
+      "suggestedCreationType": "Existing",
+      "details": {
+        "displayName": "Microsoft Entra ID",
+        "iconUri": "https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/v1.0.1751/1.0.1751.4207/azuread/icon.png"
+      },
+      "configurableBy": "System",
+      "hierarchy": "Child",
+      "dependsOn": []
+    },
+    "9835698d-d7f6-4038-bda4-285de42b59bc": {
+      "type": "Microsoft.PowerApps/apis/connections",
+      "suggestedCreationType": "Existing",
+      "creationType": "Existing",
+      "details": {
+        "displayName": "Microsoft Entra ID",
+        "iconUri": "https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/v1.0.1751/1.0.1751.4207/azuread/icon.png"
+      },
+      "configurableBy": "User",
+      "hierarchy": "Child",
+      "dependsOn": ["f6c6e426-7140-4ee0-bd5f-0c6ba0be7297"]
+    },
+    "c0f4f5e5-395e-4379-8f34-b26ad5e6efe2": {
+      "type": "Microsoft.PowerApps/apis/connections",
+      "suggestedCreationType": "Existing",
+      "creationType": "Existing",
+      "details": {
+        "displayName": "Microsoft Entra ID",
+        "iconUri": "https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/v1.0.1751/1.0.1751.4207/azuread/icon.png"
+      },
+      "configurableBy": "User",
+      "hierarchy": "Child",
+      "dependsOn": ["f6c6e426-7140-4ee0-bd5f-0c6ba0be7297"]
+    },
+    "896bd160-1b78-4312-b0e2-8a3bdb95efe7": {
+      "id": "/providers/Microsoft.PowerApps/apis/shared_sharepointonline",
+      "name": "shared_sharepointonline",
+      "type": "Microsoft.PowerApps/apis",
+      "suggestedCreationType": "Existing",
+      "details": {
+        "displayName": "SharePoint",
+        "iconUri": "https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/v1.0.1754/1.0.1754.4231/sharepointonline/icon.png"
+      },
+      "configurableBy": "System",
+      "hierarchy": "Child",
+      "dependsOn": []
+    },
+    "5f2458a9-9a32-41a9-873e-44bb8950caa2": {
+      "type": "Microsoft.PowerApps/apis/connections",
+      "suggestedCreationType": "Existing",
+      "creationType": "Existing",
+      "details": {
+        "displayName": "REDACTED_EMAIL",
+        "iconUri": "https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/v1.0.1754/1.0.1754.4231/sharepointonline/icon.png"
+      },
+      "configurableBy": "User",
+      "hierarchy": "Child",
+      "dependsOn": ["896bd160-1b78-4312-b0e2-8a3bdb95efe7"]
+    }
+  }
+}

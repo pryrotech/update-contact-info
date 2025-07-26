@@ -1,0 +1,44 @@
+{
+  "name": "REDACTED_FLOW_ID",
+  "type": "Microsoft.Flow/flows",
+  "properties": {
+    "displayName": "Update Contact Info - Update Information",
+    "definition": {
+      "triggers": {
+        "manual": {
+          "type": "Request",
+          "kind": "Button"
+        }
+      },
+      "actions": {
+        "SendReminderEmail": {
+          "type": "OpenApiConnection",
+          "inputs": {
+            "parameters": {
+              "To": "@userPrincipalName",
+              "Subject": "Please Update Your Contact Info",
+              "Body": "<p>Reminder to update your contact info: <a href=\"https://REDACTED_URL\">Update Form</a></p>"
+            },
+            "host": {
+              "apiId": "/providers/Microsoft.PowerApps/apis/shared_office365"
+            }
+          }
+        }
+      }
+    },
+    "connectionReferences": {
+      "shared_office365": {
+        "connectionName": "REDACTED_CONN_1",
+        "apiName": "office365"
+      },
+      "shared_azuread": {
+        "connectionName": "REDACTED_CONN_2",
+        "apiName": "azuread"
+      },
+      "shared_sharepointonline": {
+        "connectionName": "REDACTED_CONN_3",
+        "apiName": "sharepointonline"
+      }
+    }
+  }
+}
